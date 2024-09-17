@@ -38,6 +38,13 @@ const LeftSidebar = () => {
       "DisasterType": "flood",
       "Location": "India, Bangladesh",
       "Summary": "5/5 have grown in Bangladesh since Sheikh Hasina's downfall and her subsequent refuge in India. English: https://t.co/xeLKL7d1WB Hindi: http://www.dailymail.co."
+    },
+    {
+      "Date": "2024-01-01",
+      "Time": "12:34",
+      "DisasterType": "Flood",
+      "Location": "Mumbai, India",
+      "Summary": "Severe flooding in the area."
     }
   ];
 
@@ -73,7 +80,7 @@ const LeftSidebar = () => {
     backgroundColor: '#1e1e2f',
     color: 'white',
     padding: '20px',
-    width: '430px',
+    width: '445px',
     height: '80vh',
     display: 'flex',
     flexDirection: 'column',
@@ -107,7 +114,7 @@ const LeftSidebar = () => {
   };
 
   const summariesContainerStyle = {
-    overflowY: 'scroll',
+    overflowY: 'auto',
     flex: 1,
   };
 

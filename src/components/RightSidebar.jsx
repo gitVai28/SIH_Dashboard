@@ -58,7 +58,7 @@ const RightSidebar = () => {
     datasets: [
       {
         label: 'Disaster-related Content',
-        data: [120, 90, 80, 110, 60], // Sample data
+        data: [120, 90, 60, 110, 140], // Sample data
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
@@ -109,7 +109,7 @@ const RightSidebar = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#1a1a2e', color: 'white', padding: '20px', display: 'flex', flexDirection: 'column', gap: '60px' }}>
+    <div style={{ backgroundColor: '#1a1a2e', color: 'white', padding: '20px', display: 'flex', flexDirection: 'column', gap: '63px' }}>
       <div style={{ height: '200px' }}>
         {/* Line chart representing social media disaster-related content */}
         <Line data={lineChartData} options={options} />
