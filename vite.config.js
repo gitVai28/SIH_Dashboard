@@ -1,14 +1,15 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'  // Import path for alias resolution
+import path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // Define @ as alias for src folder
+      '@': path.resolve(__dirname, './src'),
     },
   },
-  base: '/NewDashboard/',  // Add the base to match your GitHub repository name
+  // Add this if you're hosting on GitHub Pages
+  base: '/SIH_Dashboard/',  // Replace with your repo name
 })
