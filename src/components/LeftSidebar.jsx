@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const LeftSidebar = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
   // Updated sample JSON data
   const jsonData = [
     {
@@ -29,6 +31,14 @@ const LeftSidebar = () => {
       "Summary": "Severe drought conditions persist in parts of Maharashtra, affecting agriculture."
     }
   ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 30 * 60 * 1000); // Update every 30 minutes
+
+    return () => clearInterval(timer);
+  }, []);
 
   const sidebarStyle = {
     backgroundColor: '#ffffff',
@@ -67,7 +77,10 @@ const LeftSidebar = () => {
 
   return (
     <div style={sidebarStyle}>
-      <h2 style={{ marginBottom: '20px', fontSize: '1.5em', color: '#333333' }}>Disaster Summaries</h2>
+      <h2 style={{ marginBottom: '10px', fontSize: '1.5em', color: '#333333' }}>Disaster Summaries</h2>
+      <p style={{ marginBottom: '20px', fontSize: '1em', color: '#666666' }}>
+        Last updated: {currentTime.toLocaleTimeString()}
+      </p>
       
       <div style={summariesContainerStyle}>
         {jsonData.map((item, index) => (

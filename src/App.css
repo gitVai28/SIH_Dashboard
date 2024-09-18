@@ -25,10 +25,9 @@ body {
 /* Statistics section */
 .statistics {
   grid-area: statistics;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
   display: flex;
   justify-content: space-between;
   align-items: center;

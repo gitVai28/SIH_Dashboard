@@ -177,27 +177,8 @@ const RightSidebar = () => {
   };
 
   return (
-    <div className="bg-white text-gray-800 p-4 w-100 h-screen overflow-hidden flex flex-col">
-      <h2 className="text-2xl font-bold mb-4 text-blue-700">Human Impact</h2>
-
-      <div className="grid grid-cols-3 gap-2 mb-6">
-        <div className="bg-red-100 p-3 rounded-lg text-center">
-          <Users className="mx-auto text-red-500 mb-1" size={24} />
-          <p className="text-xs text-red-700">Affected</p>
-          <p className="text-lg font-bold text-red-800">{humanImpactData.affected.toLocaleString()}</p>
-        </div>
-        <div className="bg-yellow-100 p-3 rounded-lg text-center">
-          <Home className="mx-auto text-yellow-500 mb-1" size={24} />
-          <p className="text-xs text-yellow-700">Displaced</p>
-          <p className="text-lg font-bold text-yellow-800">{humanImpactData.displaced.toLocaleString()}</p>
-        </div>
-        <div className="bg-blue-100 p-3 rounded-lg text-center">
-          <Heart className="mx-auto text-blue-500 mb-1" size={24} />
-          <p className="text-xs text-blue-700">Homes Lost</p>
-          <p className="text-lg font-bold text-blue-800">{humanImpactData.homesLost.toLocaleString()}</p>
-        </div>
-      </div>
-
+    <div className="bg-white text-gray-800 p-4 w-120 h-screen overflow-hidden flex flex-col">
+      
       <h3 className="text-xl font-semibold mb-3 text-blue-700">Filters</h3>
 
       <div className="space-y-3 mb-6">
@@ -240,6 +221,26 @@ const RightSidebar = () => {
           ))}
         </select>
       </div>
+      <h2 className="text-2xl font-bold mb-4 text-blue-700">Human Impact</h2>
+
+      <div className="grid grid-cols-3 gap-2 mb-6">
+        <div className="bg-red-100 p-3 rounded-lg text-center">
+          <Users className="mx-auto text-red-500 mb-1" size={24} />
+          <p className="text-xs text-red-700">Affected</p>
+          <p className="text-lg font-bold text-red-800">{humanImpactData.affected.toLocaleString()}</p>
+        </div>
+        <div className="bg-yellow-100 p-3 rounded-lg text-center">
+          <Home className="mx-auto text-yellow-500 mb-1" size={24} />
+          <p className="text-xs text-yellow-700">Displaced</p>
+          <p className="text-lg font-bold text-yellow-800">{humanImpactData.displaced.toLocaleString()}</p>
+        </div>
+        <div className="bg-blue-100 p-3 rounded-lg text-center">
+          <Heart className="mx-auto text-blue-500 mb-1" size={24} />
+          <p className="text-xs text-blue-700">Homes Lost</p>
+          <p className="text-lg font-bold text-blue-800">{humanImpactData.homesLost.toLocaleString()}</p>
+        </div>
+      </div>
+
 
       <h3 className="text-xl font-semibold mb-3 text-blue-700">Recent Events</h3>
 
