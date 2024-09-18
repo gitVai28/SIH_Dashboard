@@ -46,7 +46,7 @@ const Header = () => {
       <div className="flex justify-between items-center">
         {/* Navigation Links */}
         <nav className="flex space-x-4">
-          <Link to="/" className="text-white hover:underline">Dashboard</Link>
+          <Link to="/" className="text-white hover:underline">Home</Link>
           <Link to="/archive" className="text-white hover:underline">Archive</Link>
           <Link to="/reports" className="text-white hover:underline">Reports</Link>
         </nav>
