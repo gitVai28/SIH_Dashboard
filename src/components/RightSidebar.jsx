@@ -177,7 +177,7 @@ const RightSidebar = () => {
   };
 
   return (
-    <div className="bg-white text-gray-800 p-4 w-96 h-screen overflow-hidden flex flex-col">
+    <div className="bg-white text-gray-800 p-4 w-100 h-screen overflow-hidden flex flex-col">
       <h2 className="text-2xl font-bold mb-4 text-blue-700">Human Impact</h2>
 
       <div className="grid grid-cols-3 gap-2 mb-6">
@@ -205,7 +205,8 @@ const RightSidebar = () => {
           name="location"
           value={filters.location}
           onChange={handleFilterChange}
-          className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white"
+          className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white appearance-none"
+          style={{WebkitAppearance: 'none', MozAppearance: 'none'}}
         >
           <option value="">All Locations</option>
           {locations.map((location, index) => (
@@ -217,7 +218,8 @@ const RightSidebar = () => {
           name="disasterType"
           value={filters.disasterType}
           onChange={handleFilterChange}
-          className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white"
+          className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white appearance-none"
+          style={{WebkitAppearance: 'none', MozAppearance: 'none'}}
         >
           <option value="">All Disaster Types</option>
           {disasterTypes.map((type, index) => (
@@ -229,7 +231,8 @@ const RightSidebar = () => {
           name="riskLevel"
           value={filters.riskLevel}
           onChange={handleFilterChange}
-          className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white"
+          className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white appearance-none"
+          style={{WebkitAppearance: 'none', MozAppearance: 'none'}}
         >
           <option value="">All Risk Levels</option>
           {riskLevels.map((level, index) => (
@@ -240,7 +243,7 @@ const RightSidebar = () => {
 
       <h3 className="text-xl font-semibold mb-3 text-blue-700">Recent Events</h3>
 
-      <div className="overflow-y-auto flex-grow">
+      <div className="overflow-y-auto flex-grow" style={{scrollbarWidth: 'thin', scrollbarColor: '#CBD5E0 #EDF2F7'}}>
         {summaries.map((event, index) => (
           <div 
             key={index} 
@@ -267,7 +270,7 @@ const RightSidebar = () => {
       </div>
 
       {selectedEvent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" style={{zIndex: 1000}}>
           <div className="bg-white p-6 rounded-lg shadow-xl max-w-md">
             <h4 className="text-xl font-semibold mb-2 text-blue-700">{selectedEvent.DisasterType} Summary</h4>
             <p className="text-sm text-gray-700 mb-4">{selectedEvent.Summary}</p>
