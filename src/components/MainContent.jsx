@@ -17,7 +17,7 @@ const MainContent = () => {
         zoom: 5,
       });
 
-      disasterData.forEach(({ Date, Time, DisasterType, Location, Summary }) => {
+      disasterData.forEach(({ Date, Time, DisasterType, Location, Summary, Image }) => {
         const geocoder = new google.maps.Geocoder();
 
         geocoder.geocode({ address: Location }, (results, status) => {
@@ -31,10 +31,13 @@ const MainContent = () => {
 
             const infoWindow = new google.maps.InfoWindow({
               content: `
-                <h3>${DisasterType} in ${Location}</h3>
-                <p><strong>Date:</strong> ${Date}</p>
-                <p><strong>Time:</strong> ${Time}</p>
-                <p><strong>Summary:</strong> ${Summary}</p>
+                <div style="max-width: 300px;">
+                  <h3>${DisasterType} in ${Location}</h3>
+                  <p><strong>Date:</strong> ${Date}</p>
+                  <p><strong>Time:</strong> ${Time}</p>
+                  <p><strong>Summary:</strong> ${Summary}</p>
+                  ${Image ? `<img src="${Image}" alt="${DisasterType}" style="max-width: 100%; height: auto;">` : ''}
+                </div>
               `,
             });
 

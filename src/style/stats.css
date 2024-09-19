@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+    margin: 0 5px;
   }
   
   .circle {
@@ -56,10 +56,10 @@
   .radar-sweep.delay-4 {
     animation-delay: 1.5s;
   }
-  
+
   .data {
     font-size: 14px;
-    color: #a99393;
+    color: #000000;
   }
   
   /* Keyframes for the rotating radar sweep */

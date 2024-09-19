@@ -4,34 +4,40 @@
         "Time": "23:38:22",
         "DisasterType": "flood",
         "Location": "V, Gujaratadodara",
-        "Summary": "Gujarat and Vadodara have been hit by heavy rain and flooding. Flooding has been reported in parts of the state. Flood warnings and advisories have been issued."
+        "Summary": "Gujarat and Vadodara have been hit by heavy rain and flooding. Flooding has been reported in parts of the state. Flood warnings and advisories have been issued.",
+        "Image" : "https://www.hindustantimes.com/ht-img/img/2024/08/29/550x309/A-flooded-area-after-heavy-rainfall-in-Vadodara-on_1724870649357_1724891912114.jpg"
+
     },
     {
         "Date": 300824,
         "Time": "23:08:56",
-        "DisasterType": "flood",
+        "DisasterType": "Cyclone, Flood",
         "Location": "Khambala, Gujarat",
-        "Summary": "Gujarat CM: Cyclone Asna has been declared a disaster in the state. Floods have been reported in several parts of the state, including Ahmedabad."
+        "Summary": "Gujarat CM: Cyclone Asna has been declared a disaster in the state. Floods have been reported in several parts of the state, including Ahmedabad.",
+        "Image" : "https://sc0.blr1.cdn.digitaloceanspaces.com/article/121775-tnpuzpiwof-1560442281.jpg"
     },
     {
         "Date": 300824,
         "Time": "22:20:52",
         "DisasterType": "flood",
         "Location": "V, Gujarat, Gujaratadodara",
-        "Summary": "Crocodile spotted on roof of a house in Gujarat's Vadodara. 35 dead, 140 dams and 24 rivers overflowing in Gujarat. Around 8,500 residents relocated and rescued."
+        "Summary": "Crocodile spotted on roof of a house in Gujarat's Vadodara. 35 dead, 140 dams and 24 rivers overflowing in Gujarat. Around 8,500 residents relocated and rescued.",
+        "Image" : "https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20240829083329.jpg"
     },
     {
         "Date": 300824,
         "Time": "21:31:58",
         "DisasterType": "flood",
         "Location": "India, Bangladesh",
-        "Summary": "5/5 have grown in Bangladesh since Sheikh Hasina's downfall and her subsequent refuge in India. English: https://t.co/xeLKL7d1WB Hindi: http://www.dailymail.co."
+        "Summary": "5/5 have grown in Bangladesh since Sheikh Hasina's downfall and her subsequent refuge in India. English: https://t.co/xeLKL7d1WB Hindi: http://www.dailymail.co.",
+        "Image" : "https://images.moneycontrol.com/static-mcnews/2024/08/20240823081627_bdesh.jpg"
     },
     {
         "Date": "2024-01-01",
         "Time": "12:34",
         "DisasterType": "Flood",
         "Location": "Mumbai, India",
-        "Summary": "Severe flooding in the area."
+        "Summary": "Severe flooding in the area.",
+        "Image" : "https://images.hindustantimes.com/rf/image_size_800x600/HT/p2/2015/07/25/Incoming/Pictures/mumbai-deluge_ba1585de-32f0-11e5-a8da-005056b4648e.jpg"
       }
 ]
