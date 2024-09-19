@@ -177,7 +177,7 @@ const RightSidebar = () => {
   };
 
   return (
-    <div className="bg-white text-gray-800 p-4 w-120 h-screen overflow-hidden flex flex-col">
+    <div className="bg-white text-gray-800 p-4 w-70 h-screen overflow-hidden flex flex-col">
       
       <h3 className="text-xl font-semibold mb-3 text-blue-700">Filters</h3>
 

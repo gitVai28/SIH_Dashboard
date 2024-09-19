@@ -3,18 +3,30 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [lastUpdated, setLastUpdated] = useState(() => {
+    const now = new Date();
+    // Round down to the nearest 15-minute interval
+    now.setMinutes(Math.floor(now.getMinutes() / 15) * 15);
+    now.setSeconds(0);
+    now.setMilliseconds(0);
+    return now;
+  });
 
   useEffect(() => {
-    // Update time every second
+    // Update current time every second
     const timer = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
 
     // Update "Last Updated" every 15 minutes
-    const updateTimer = setInterval(() => {
-      setLastUpdated(new Date());
-    }, 15 * 60 * 1000);
+    const updateLastUpdated = () => {
+      const now = new Date();
+      if (now.getMinutes() % 15 === 0 && now.getSeconds() === 0) {
+        setLastUpdated(now);
+      }
+    };
+
+    const updateTimer = setInterval(updateLastUpdated, 1000);
 
     // Clean up timers when the component is unmounted
     return () => {
@@ -26,7 +38,7 @@ const Header = () => {
   // Format date as DD/MM/YYYY
   const formatDate = (date) => {
     const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // getMonth() returns 0-11
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
   };

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 const LeftSidebar = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState(() => {
+    const now = new Date();
+    // Round down to the nearest 30-minute interval
+    now.setMinutes(Math.floor(now.getMinutes() / 30) * 30);
+    now.setSeconds(0);
+    now.setMilliseconds(0);
+    return now;
+  });
 
   // Updated sample JSON data
   const jsonData = [
@@ -33,9 +40,14 @@ const LeftSidebar = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 30 * 60 * 1000); // Update every 30 minutes
+    const updateTime = () => {
+      const now = new Date();
+      if (now.getMinutes() % 30 === 0 && now.getSeconds() === 0) {
+        setCurrentTime(now);
+      }
+    };
+
+    const timer = setInterval(updateTime, 1000); // Check every second
 
     return () => clearInterval(timer);
   }, []);

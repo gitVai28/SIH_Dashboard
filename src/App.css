@@ -51,7 +51,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100%; /* Ensure it takes full available height */
-  overflow-y: auto; /* Add vertical scrollbar for right sidebar only */
+   /* Add vertical scrollbar for right sidebar only */
 }
 
 /* Main content area */
