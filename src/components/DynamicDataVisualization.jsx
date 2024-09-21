@@ -190,7 +190,9 @@ const DataSourceVisualization = () => {
                       <XAxis dataKey="name">
                         <Label value="Disaster Type" offset={-5} position="insideBottom" />
                       </XAxis>
-                      <YAxis allowDecimals={false} />
+                      <YAxis allowDecimals={false}>
+                        <Label value="Number of Occurrences" angle={-90} position="insideLeft" style={{ textAnchor: 'middle' }} />
+                      </YAxis>
                       <Tooltip />
                       <Legend />
                       <Bar dataKey="value" fill="#82ca9d" />

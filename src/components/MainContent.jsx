@@ -4,6 +4,7 @@ import disasterData from './newTweets.json'; // Assuming the JSON file is in the
 
 const MainContent = () => {
   const mapRef = useRef(null);
+  const openInfoWindowRef = useRef(null);
 
   useEffect(() => {
     const loader = new Loader({
@@ -42,7 +43,11 @@ const MainContent = () => {
             });
 
             marker.addListener('click', () => {
+              if (openInfoWindowRef.current) {
+                openInfoWindowRef.current.close();
+              }
               infoWindow.open(map, marker);
+              openInfoWindowRef.current = infoWindow;
             });
           } else {
             console.error('Geocode failed due to: ' + status);

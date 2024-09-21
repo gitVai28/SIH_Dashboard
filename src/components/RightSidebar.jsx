@@ -176,8 +176,8 @@ const RightSidebar = () => {
     }
   };
 
-  return (
-    <div className="bg-white text-gray-800 p-4 w-70 h-screen overflow-hidden flex flex-col">
+  return (<div className="bg-white text-gray-800 p-4 w-96 h-[90vh] overflow-hidden flex flex-col">
+    
       
       <h3 className="text-xl font-semibold mb-3 text-blue-700">Filters</h3>
 
@@ -242,7 +242,7 @@ const RightSidebar = () => {
       </div>
 
 
-      <h3 className="text-xl font-semibold mb-3 text-blue-700">Recent Events</h3>
+      <h3 className="text-xl font-semibold mb-1 text-blue-700">Recent Events</h3>
 
       <div className="overflow-y-auto flex-grow" style={{scrollbarWidth: 'thin', scrollbarColor: '#CBD5E0 #EDF2F7'}}>
         {summaries.map((event, index) => (
