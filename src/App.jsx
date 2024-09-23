@@ -9,6 +9,8 @@ import LeftSidebar from './components/LeftSidebar';
 import RightSidebar from './components/RightSidebar';
 import MainContent from './components/MainContent';
 import DynamicDataVisualization from './components/DynamicDataVisualization';
+import PredictiveAnalysis from './components/PredictiveAnalysis';
+import DisasterReport from './components/DisasterReport';
 
 // Dashboard component
 function Dashboard() {
@@ -45,8 +47,18 @@ function Archive() {
 function Reports() {
   return (
     <div>
-      <h2>Reports</h2>
-      <p>Here are some reports.</p>
+      
+      <DisasterReport/>
+    </div>
+  );
+}
+
+// Predictions component
+function Predictions() {
+  return (
+    <div>
+      
+      <PredictiveAnalysis />
     </div>
   );
 }
@@ -65,6 +77,9 @@ function App() {
         {/* Routes for Archive and Reports without container styling */}
         <Route path="/archive" element={<Archive />} />
         <Route path="/reports" element={<Reports />} />
+        
+        {/* New route for Predictions */}
+        <Route path="/predictions" element={<Predictions />} />
 
         {/* Fallback route for unmatched paths */}
         <Route path="*" element={<Navigate to="/" />} />
